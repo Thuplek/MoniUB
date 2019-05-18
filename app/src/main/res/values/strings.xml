@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MoniUB</string>
+    <string-array name="cursos">
+        <item>Sistemas de Informações</item>
+        <item>Agronegocio</item>
+        <item>Ciencias Contabeis</item>
+        <item>Administração</item>
+        <item>Direito</item>
+        <item>Pedagogia</item>
+        <item>Gestão Comercial</item>
+    </string-array>
+</resources>
