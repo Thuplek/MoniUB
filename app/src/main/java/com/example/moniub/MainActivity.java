@@ -11,9 +11,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // chamando tela de registro assim q o app abre so pra testar
-        Intent intent = new Intent(this, RegisterActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
+        // chamando tela de registro assim q o app abre so pra testar
+//        Intent intent = new Intent(this, RegisterActivity.class);
+//        startActivity(intent);
 
     }
 }
