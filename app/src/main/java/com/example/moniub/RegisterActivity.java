@@ -27,7 +27,7 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
             String text = parent.getItemAtPosition(position).toString();
-            Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
         }
 
         @Override
