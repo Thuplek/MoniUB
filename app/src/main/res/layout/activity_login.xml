@@ -44,7 +44,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Entrar" />
+            android:text="Entrar"
+            android:onClick="entrar"
+            />
 
         <TextView
             android:id="@+id/textView10"
@@ -59,7 +61,8 @@
             android:id="@+id/cadstrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cadastra-se aqui!" />
+            android:text="Cadastra-se aqui!"
+            android:onClick="telaregister"/>
     </LinearLayout>
 
     <android.support.constraint.Guideline
