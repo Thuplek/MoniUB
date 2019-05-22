@@ -27,7 +27,8 @@ public class LoginActivity extends AppCompatActivity {
         senha = findViewById(R.id.senha);
         String sSenha = senha.getText().toString();
         if(sMatricula.equals("12345") && sSenha.equals("12345")){
-
+            Intent intent = new Intent(LoginActivity.this, TelaMateriasPeriodo.class);
+            startActivity(intent);
         }else{
             Toast.makeText(getApplicationContext(),"Credenciais incorretas",Toast.LENGTH_SHORT).show();
         }
@@ -43,5 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
         startActivity(intent);
     }
+
+
 
 }
