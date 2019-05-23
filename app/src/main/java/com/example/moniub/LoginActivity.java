@@ -22,13 +22,17 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void entrar(View v) {
+
         matricula = findViewById(R.id.numeroMatricula);
         String sMatricula = matricula.getText().toString();
         senha = findViewById(R.id.senha);
         String sSenha = senha.getText().toString();
+
         if(sMatricula.equals("12345") && sSenha.equals("12345")){
-            Intent intent = new Intent(LoginActivity.this, TelaMateriasPeriodo.class);
+
+            Intent intent = new Intent(LoginActivity.this, PrincipalActivity.class);
             startActivity(intent);
+
         }else{
             Toast.makeText(getApplicationContext(),"Credenciais incorretas",Toast.LENGTH_SHORT).show();
         }
