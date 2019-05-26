@@ -1,50 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelaPrincipal">
+    tools:context=".PrincipalActivity">
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="334dp"
-        android:layout_height="61dp"
-        android:text="Sistemas de Informação"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="16dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="331dp"
-        android:layout_height="95dp"
-        android:hapticFeedbackEnabled="false"
-        android:text="1º Período"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="112dp" />
+        <TextView
+            android:id="@+id/textNomeCurso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sistemas de Informação"
+            android:textSize="24sp" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="331dp"
-        android:layout_height="86dp"
-        android:text="2º Período"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="258dp" />
+        <ListView
+            android:id="@+id/listaPeriodos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="335dp"
-        android:layout_height="88dp"
-        android:text="3º Período"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="401dp" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="337dp"
-        android:layout_height="83dp"
-        android:text="4º Período"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="546dp" />
 </android.support.constraint.ConstraintLayout>

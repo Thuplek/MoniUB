@@ -1,6 +1,8 @@
 package com.example.moniub;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,22 +15,32 @@ public class LoginActivity extends AppCompatActivity {
     Button cadastrar;
     EditText matricula;
     EditText senha;
+    public static final String MyPREFERENCES = "MyPrefs";
+    public static final String MATRICULA = "12345";
+    public static final String SENHA = "12345";
+
+    SharedPreferences sharedpreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
     }
 
     public void entrar(View v) {
 
         matricula = findViewById(R.id.numeroMatricula);
-        String sMatricula = matricula.getText().toString();
         senha = findViewById(R.id.senha);
+
+        String sMatricula = matricula.getText().toString();
         String sSenha = senha.getText().toString();
 
-        if(sMatricula.equals("12345") && sSenha.equals("12345")){
+        if(sMatricula.equals(MATRICULA) && sSenha.equals(SENHA)){
+
+            SharedPreferences.Editor editor = sharedpreferences.edit();
+            editor.putString(MATRICULA, sMatricula);
+            editor.putString(SENHA, sSenha);
+            editor.commit();
 
             Intent intent = new Intent(LoginActivity.this, PrincipalActivity.class);
             startActivity(intent);
@@ -37,18 +49,11 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Credenciais incorretas",Toast.LENGTH_SHORT).show();
         }
 
-
-
-
-
-
     }
 
     public void telaregister(View v) {
         Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
         startActivity(intent);
     }
-
-
 
 }
