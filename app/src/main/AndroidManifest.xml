@@ -9,14 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PrincipalActivity"></activity>
-        <activity android:name=".TelaMateriasPeriodo"></activity>
+        <activity android:name=".PrincipalActivity"
+            android:label="Cursos"></activity>
+        <activity android:name=".TelaMateriasPeriodo"
+            android:label="Materias"></activity>
         <activity
             android:name=".MenuActivity"
-            android:label="@string/title_activity_menu"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".RegisterActivity" />
+            android:label="Menu"/>
+        <activity android:name=".LoginActivity"
+            android:label="Login"/>
+        <activity android:name=".RegisterActivity"
+            android:label="Cadastro"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
