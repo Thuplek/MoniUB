@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
 //            editor.putString(SENHA, sSenha);
 //            editor.commit();
 
-            Intent intent = new Intent(LoginActivity.this, PrincipalActivity.class);
+            Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
             startActivity(intent);
 
         }else{
