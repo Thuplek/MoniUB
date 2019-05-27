@@ -1,5 +1,6 @@
 package com.example.moniub;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -33,6 +34,10 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
         @Override
         public void onNothingSelected(AdapterView<?> parent) {
 
+        }
+        public void telalogin(View v){
+            Intent intent = new Intent(this,LoginActivity.class);
+            startActivity(intent);
         }
 
     }
