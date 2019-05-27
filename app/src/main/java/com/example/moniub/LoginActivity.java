@@ -15,16 +15,16 @@ public class LoginActivity extends AppCompatActivity {
     Button cadastrar;
     EditText matricula;
     EditText senha;
-    public static final String MyPREFERENCES = "MyPrefs";
-    public static final String MATRICULA = "12345";
-    public static final String SENHA = "12345";
+//    public static final String MyPREFERENCES = "MyPrefs";
+    public static final String MATRICULA = "1";
+    public static final String SENHA = "1";
 
-    SharedPreferences sharedpreferences;
+//    SharedPreferences sharedpreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+//        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
     }
 
     public void entrar(View v) {
@@ -37,10 +37,10 @@ public class LoginActivity extends AppCompatActivity {
 
         if(sMatricula.equals(MATRICULA) && sSenha.equals(SENHA)){
 
-            SharedPreferences.Editor editor = sharedpreferences.edit();
-            editor.putString(MATRICULA, sMatricula);
-            editor.putString(SENHA, sSenha);
-            editor.commit();
+//            SharedPreferences.Editor editor = sharedpreferences.edit();
+//            editor.putString(MATRICULA, sMatricula);
+//            editor.putString(SENHA, sSenha);
+//            editor.commit();
 
             Intent intent = new Intent(LoginActivity.this, PrincipalActivity.class);
             startActivity(intent);
