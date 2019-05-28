@@ -7,18 +7,21 @@
 
     <GridLayout
         android:id="@+id/gl"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:columnCount="3"
 
-        >
+        android:layout_centerInParent="true"
+        android:columnCount="3"
+        android:columnOrderPreserved="false"
+        android:filterTouchesWhenObscured="false"
+        android:fitsSystemWindows="false"
+        android:focusable="auto"
+        android:useDefaultMargins="true">
 
         <ImageView
             android:id="@+id/cursos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
             android:onClick="telaprincipal"
             app:srcCompat="@drawable/cursos"
             tools:layout_conversion_absoluteHeight="96dp"
@@ -30,8 +33,6 @@
             android:id="@+id/editar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
             android:onClick="telaeditar"
             app:srcCompat="@drawable/editar"
             tools:layout_conversion_absoluteHeight="96dp"
@@ -43,8 +44,6 @@
             android:id="@+id/monitor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
             android:onClick="telamonitor"
             app:srcCompat="@drawable/monitor"
             tools:layout_conversion_absoluteHeight="96dp"
@@ -56,8 +55,6 @@
             android:id="@+id/sair"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
             app:srcCompat="@drawable/sair" />
 
     </GridLayout>
