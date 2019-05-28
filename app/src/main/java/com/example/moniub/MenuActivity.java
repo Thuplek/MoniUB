@@ -16,6 +16,9 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
         ImageView sair = findViewById(R.id.sair);
+        ImageView monitor = findViewById(R.id.monitor);
+        ImageView editar = findViewById(R.id.editar);
+
 
         sair.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -23,6 +26,21 @@ public class MenuActivity extends AppCompatActivity {
                 sair();
             }
         });
+
+        monitor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                telamonitor(v);
+            }
+        });
+
+        editar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                telaeditar(v);
+            }
+        });
+
     }
     public void telaprincipal(View v) {
         Intent intent = new Intent(this,PrincipalActivity.class);
