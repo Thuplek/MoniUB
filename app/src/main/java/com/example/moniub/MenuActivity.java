@@ -53,7 +53,8 @@ public class MenuActivity extends AppCompatActivity {
     }
     public void telamonitor(View v) {
 
-        Toast.makeText(getApplicationContext(),"Em Breve",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this,TornarMonitorActivity.class);
+        startActivity(intent);
     }
     public void sair(){
         finish();
