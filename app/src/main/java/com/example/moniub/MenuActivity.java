@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
@@ -20,24 +21,52 @@ public class MenuActivity extends AppCompatActivity {
         ImageView editar = findViewById(R.id.editar);
 
 
+        TextView periodos = findViewById(R.id.periodos);
+        TextView perfil = findViewById(R.id.perfil);
+        TextView serMonitor = findViewById(R.id.serMonitor);
+        TextView sairText = findViewById(R.id.sairText);
+
         sair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sair();
             }
         });
-
         monitor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 telamonitor(v);
             }
         });
-
         editar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 telaeditar(v);
+            }
+        });
+
+        periodos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                telaprincipal(v);
+            }
+        });
+        perfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                telaeditar(v);
+            }
+        });
+        serMonitor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                telamonitor(v);
+            }
+        });
+        sairText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sair();
             }
         });
 
