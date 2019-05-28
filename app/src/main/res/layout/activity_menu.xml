@@ -51,11 +51,42 @@
             tools:layout_editor_absoluteX="282dp"
             tools:layout_editor_absoluteY="0dp" />
 
+        <TextView
+            android:id="@+id/periodos"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:gravity="center"
+            android:text="Períodos" />
+
+        <TextView
+            android:id="@+id/perfil"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Perfil" />
+
+        <TextView
+            android:id="@+id/serMonitor"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Ser monitor" />
+
         <ImageView
             android:id="@+id/sair"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/sair" />
+
+        <TextView
+            android:id="@+id/sairText"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:gravity="center"
+            android:text="Sair" />
 
     </GridLayout>
 
