@@ -9,6 +9,82 @@
         <item>Pedagogia</item>
         <item>Gestão Comercial</item>
     </string-array>
+    <string-array name="materias1p">
+        <item>FUNDAMENTOS DE INTERNET</item>
+        <item>FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO</item>
+        <item>INICIAÇÃO UNIVERSITÁRIA</item>
+        <item>INTEGRAÇÃO E SOCIALIZAÇÃO PESSOAL E PROFISSIONAL</item>
+        <item>INTRODUÇÃO À COMPUTAÇÃO</item>
+        <item>LÍNGUA PORTUGUESA</item>
+        <item>LÓGICA</item>
+    </string-array>
+    <string-array name="materias2p">
+        <item>ALGORITMOS E PROGRAMAÇÃO I</item>
+        <item>ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES</item>
+        <item>EMPREENDEDORISMO</item>
+        <item>INTEGRAÇÃO E SOCIALIZAÇÃO PESSOAL E PROFISSIONAL</item>
+        <item>MATEMATICA APLICADA</item>
+        <item>METODOLOGIA CIENTÍFICA</item>
+        <item>REDES DE COMPUTADORES</item>
+    </string-array>
+    <string-array name="materias3p">
+        <item>ADMINISTRAÇÃO E GERENCIA DE REDES</item>
+        <item>ALGORITMOS E PROGRAMAÇÃO II</item>
+        <item>BANCO DE DADOS I</item>
+        <item>COMPORTAMENTO ORGANIZACIONAL</item>
+        <item>FUNDAMENTOS DE ADMINISTRAÇÃO</item>
+        <item>INTEGRAÇÃO E SOCIALIZAÇÃO PESSOAL E PROFISSIONAL</item>
+        <item>SISTEMAS OPERACIONAIS</item>
+    </string-array>
+    <string-array name="materias4p">
+        <item>BANCO DE DADOS II</item>
+        <item>ENGENHARIA DE SOFTWARE I</item>
+        <item>ESTRUTURA DE DADOS I</item>
+        <item>FUNDAMENTOS DE CONTABILIDADE</item>
+        <item>INFORMATICA E SOCIEDADE</item>
+        <item>INTEGRAÇÃO E SOCIALIZAÇÃO PESSOAL E PROFISSIONAL</item>
+        <item>PROGRAMAÇÃO ORIENTADA A OBJETO</item>
+    </string-array>
+    <string-array name="materias5p">
+        <item>ENGENHARIA DE SOFTWARE II</item>
+        <item>ESTATÍSTICA</item>
+        <item>ESTRUTURA DE DADOS II</item>
+        <item>INTEGRAÇÃO E SOCIALIZAÇÃO PESSOAL E PROFISSIONAL</item>
+        <item>PARADIGMAS DE LINGUAGENS DE PROGRAMAÇÃO</item>
+        <item>PROGRAMAÇÃO VISUAL</item>
+        <item>TECNOLOGIA DE PROGRAMAÇÃO PARA DISPOSITIVOS MOVEIS</item>
+    </string-array>
+    <string-array name="materias6p">
+        <item>ANÁLISE DE ALGORITMOS E COMPUTABILIDADE</item>
+        <item>AUTOMAÇÃO PARA O AGRONEGÓCIO</item>
+        <item>GERENCIA DE PROJETOS DE SOFTWARE</item>
+        <item>INTEGRAÇÃO E SOCIALIZAÇÃO PESSOAL E PROFISSIONAL</item>
+        <item>PESQUISA OPERACIONAL</item>
+        <item>PRÁTICA PROFISSIONAL SUPERVISIONADA</item>
+        <item>TECNOLOGIA E PROGRAMAÇÃO WEB</item>
+    </string-array>
+    <string-array name="materias7p">
+        <item>ÉTICA EM COMPUTAÇÃO</item>
+        <item>INTEGRAÇÃO E SOCIALIZAÇÃO PESSOAL E PROFISSIONAL</item>
+        <item>INTELIGÊNCIA ARTIFICIAL</item>
+        <item>PROJETO DE TRABALHO DE CONCLUSÃO DE CURSO</item>
+        <item>SEGURANÇA E AUDITORIA DE SISTEMAS</item>
+        <item>SISTEMAS DISTRIBUÍDOS</item>
+        <item>TÓPICOS ESPECIAIS EM SISTEMAS DE INFORMAÇÃO</item>
+    </string-array>
+    <string-array name="materias8p">
+        <item>COMPUTAÇÃO GRÁFICA E PROCESSAMENTO DE IMAGEM</item>
+        <item>GOVERNANÇA EM TI</item>
+        <item>INTEGRAÇÃO E SOCIALIZAÇÃO PESSOAL E PROFISSIONAL</item>
+        <item>INTELIGÊNCIA DE NEGÓCIOS</item>
+        <item>SEGURANÇA E AUDITORIA DE SISTEMAS</item>
+        <item>OPTATIVA</item>
+        <item>TRABALHO DE CONCLUSÃO DE CURSO</item>
+    </string-array>
+
+
+
+
     <string name="title_activity_menu">MenuActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

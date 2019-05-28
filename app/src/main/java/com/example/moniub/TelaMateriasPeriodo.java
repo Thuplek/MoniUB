@@ -109,7 +109,7 @@ public class TelaMateriasPeriodo extends AppCompatActivity {
         materiasPerido4SI.add("ENGENHARIA DE SOFTWARE I");
         materiasPerido4SI.add("ESTRUTURA DE DADOS I");
         materiasPerido4SI.add("FUNDAMENTOS DE CONTABILIDADE");
-        materiasPerido4SI.add("NFORMATICA E SOCIEDADE");
+        materiasPerido4SI.add("INFORMATICA E SOCIEDADE");
         materiasPerido4SI.add("INTEGRAÇÃO E SOCIALIZAÇÃO PESSOAL E PROFISSIONAL");
         materiasPerido4SI.add("PROGRAMAÇÃO ORIENTADA A OBJETO");
 
