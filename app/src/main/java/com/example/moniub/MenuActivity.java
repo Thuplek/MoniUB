@@ -20,7 +20,6 @@ public class MenuActivity extends AppCompatActivity {
         ImageView monitor = findViewById(R.id.monitor);
         ImageView editar = findViewById(R.id.editar);
 
-
         TextView periodos = findViewById(R.id.periodos);
         TextView perfil = findViewById(R.id.perfil);
         TextView serMonitor = findViewById(R.id.serMonitor);
