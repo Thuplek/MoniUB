@@ -82,9 +82,6 @@
         <item>TRABALHO DE CONCLUSÃO DE CURSO</item>
     </string-array>
 
-
-
-
     <string name="title_activity_menu">MenuActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
