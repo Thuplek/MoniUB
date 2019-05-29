@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
-
+    static AppDatabase db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -13,6 +13,9 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
+
+        db = Room.databaseBuilder(getApplicationContext(),
+                AppDatabase.class, "cursos").allowMainThreadQueries().build();
         // chamando tela de registro assim q o app abre so pra testar
 //        Intent intent = new Intent(this, RegisterActivity.class);
 //        startActivity(intent);
