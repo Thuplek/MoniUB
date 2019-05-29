@@ -1,7 +1,9 @@
 package com.example.moniub;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
+
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
