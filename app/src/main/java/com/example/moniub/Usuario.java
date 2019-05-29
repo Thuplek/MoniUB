@@ -10,12 +10,21 @@ public class Usuario {
     private long id;
     @ColumnInfo(name = "nome")
     private String nome;
-    @ColumnInfo(name = "descricao")
-    private String descricao;
+    @ColumnInfo(name = "periodo")
+    private String periodo;
+    @ColumnInfo(name = "senha")
+    private String senha;
+    @ColumnInfo(name = "matricula")
+    private String matricula;
+    @ColumnInfo(name = "curso")
+    private String curso;
 
-    public Usuario(String nome, String descricao) {
+    public Usuario(String nome, String periodo, String senha, String matricula, String curso) {
         this.nome = nome;
-        this.descricao = descricao;
+        this.periodo = periodo;
+        this.senha = senha;
+        this.matricula = matricula;
+        this.curso = curso;
     }
 
     public long getId() {
@@ -34,11 +43,35 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getPeriodo() {
+        return periodo;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setPeriodo(String periodo) {
+        this.periodo = periodo;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+    public String getCurso() {
+        return curso;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
     }
 }

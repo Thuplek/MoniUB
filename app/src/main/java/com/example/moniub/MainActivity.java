@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
         db = Room.databaseBuilder(getApplicationContext(),
-                AppDatabase.class, "cursos").allowMainThreadQueries().build();
+                AppDatabase.class, "dadosUsuario").allowMainThreadQueries().build();
         // chamando tela de registro assim q o app abre so pra testar
 //        Intent intent = new Intent(this, RegisterActivity.class);
 //        startActivity(intent);

@@ -39,4 +39,8 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
             startActivity(intent);
         }
 
+        public void cadastrar(){
+
+        }
+
     }
