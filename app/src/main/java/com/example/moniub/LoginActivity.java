@@ -17,13 +17,8 @@ public class LoginActivity extends AppCompatActivity {
     Button entrar;
     EditText matricula;
     EditText senha;
-
     static AppDatabase db;
-//    public static final String MyPREFERENCES = "MyPrefs";
-    public static final String MATRICULA = "1";
-//    public static String SENHA;
 
-//    SharedPreferences sharedpreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +31,6 @@ public class LoginActivity extends AppCompatActivity {
                 entrar(v);
             }
         });
-//        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
     }
 
     public void entrar(View v) {
@@ -53,11 +47,6 @@ public class LoginActivity extends AppCompatActivity {
 
         if(sSenha.equals(SENHA)) {
             Toast.makeText(getApplicationContext(),"Credenciais Corretas",Toast.LENGTH_SHORT).show();
-
-//            SharedPreferences.Editor editor = sharedpreferences.edit();
-//            editor.putString(MATRICULA, sMatricula);
-//            editor.putString(SENHA, sSenha);
-//            editor.commit();
 
             Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
             startActivity(intent);
