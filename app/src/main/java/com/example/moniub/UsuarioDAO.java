@@ -12,7 +12,7 @@ import androidx.room.Query;
 @Dao
 public interface UsuarioDAO {
     @Query("SELECT * FROM usuario")
-    List<Usuario> getUsuarios();
+    LiveData<List<Usuario>> getUsuarios();
 
     @Query("SELECT * FROM usuario WHERE id IN (:UsuarioIds)")
     List<Usuario> loadAllByIds(int[] UsuarioIds);
