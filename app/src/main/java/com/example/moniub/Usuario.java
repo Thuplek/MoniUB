@@ -29,6 +29,14 @@ public class Usuario {
     @ColumnInfo(name = "curso")
     private String curso;
 
+    @ColumnInfo(name = "email")
+    private String email;
+
+    @ColumnInfo(name = "contato")
+    private String contato;
+
+    @ColumnInfo(name = "sexo")
+    private String sexo;
 
     public long getId() {
         return id;
@@ -78,9 +86,27 @@ public class Usuario {
         this.curso = curso;
     }
 
-    @NonNull
-    @Override
-    public String toString() {
-        return getMatricula();
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getContato() {
+        return contato;
+    }
+
+    public void setContato(String contato) {
+        this.contato = contato;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
 }

@@ -25,32 +25,31 @@ public class MainActivity extends AppCompatActivity {
         db = Room.databaseBuilder(getApplicationContext(),
                 AppDatabase.class, "bd").allowMainThreadQueries().build();
 
-        txt = findViewById(R.id.lt);
+        usuarios = new ArrayList<>();
 
-        Usuario u = new Usuario();
-        u.setMatricula("123");
-        u.setSenha("123");
+        listausuario = findViewById(R.id.lista);
+        listausuario.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-        db.userDao().insertUsuario(u);
+            }
+        });
 
-        Log.e("LOG",u.toString());
-
-        usuarios = db.userDao().getUsuarios();
-
-        Log.e("LOG",usuarios.toString());
-
-        String dados ="";
-        for(Usuario user : usuarios){
-            String numero = user.getMatricula();
-            String senha = user.getSenha();
-            dados += dados+"\n\n"+"Numero de Matricula : "+numero+"  senha: "+senha;
-
-        }
-        txt.setText(usuarios.toString());
-
+        LiveData<List<Usuario>> liveData =  db.userDao().getUsuarios();
+        liveData.observe(this, new Observer<List<Usuario>>() {
+            @Override
+            public void onChanged(@Nullable List<Usuario> usuarios ) {
+                atualizarUsuario(usuarios);
+            }
+        });
         // chamando tela de registro assim q o app abre so pra testar
 //        Intent intent = new Intent(this, RegisterActivity.class);
 //        startActivity(intent);
 
+    }
+    public void atualizarUsuario(List<Usuario> usuario)
+    {
+        AdpterUsuario adapter = new AdpterUsuario(usuario, this);
+        listausuario.setAdapter(adapter);
     }
 }
