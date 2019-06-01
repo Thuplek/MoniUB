@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         txt = findViewById(R.id.lt);
 
         Usuario u = new Usuario();
-        u.setMatricula("asss");
+        u.setMatricula("123");
         u.setSenha("123");
 
         db.userDao().insertUsuario(u);

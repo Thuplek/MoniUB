@@ -20,6 +20,9 @@ public interface UsuarioDAO {
     @Query("SELECT * FROM usuario WHERE nome LIKE :nome")
     Usuario findName(String nome);
 
+    @Query("SELECT * FROM usuario WHERE matricula LIKE :matricula")
+    Usuario findUsuarioByMatricula(String matricula);
+
     @Insert
     void insertUsuario(Usuario... Usuarios);
 
