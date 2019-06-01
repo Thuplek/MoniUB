@@ -43,17 +43,22 @@ public class LoginActivity extends AppCompatActivity {
         String sSenha = senha.getText().toString();
 
         Usuario user = db.userDao().findUsuarioByMatricula(sMatricula);
-        String SENHA = user.getSenha();
+        String SENHA = "";
+        if(user != null){
+            SENHA = user.getSenha();
+            if(sSenha.equals(SENHA)) {
+                Toast.makeText(getApplicationContext(),"Credenciais Corretas",Toast.LENGTH_SHORT).show();
 
-        if(sSenha.equals(SENHA)) {
-            Toast.makeText(getApplicationContext(),"Credenciais Corretas",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
+                startActivity(intent);
 
-            Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
-            startActivity(intent);
-
-        }else {
-            Toast.makeText(getApplicationContext(),"Credenciais incorretas",Toast.LENGTH_SHORT).show();
+            }else {
+                Toast.makeText(getApplicationContext(),"Credenciais incorretas",Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(getApplicationContext(),"Usuário não cadastrado!",Toast.LENGTH_SHORT).show();
         }
+
     }
 
     public void telaregister(View v) {
