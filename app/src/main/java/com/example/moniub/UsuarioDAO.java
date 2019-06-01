@@ -12,7 +12,7 @@ import androidx.room.Query;
 @Dao
 public interface UsuarioDAO {
     @Query("SELECT * FROM usuario")
-    LiveData<List<Usuario>> getAll();
+    List<Usuario> getUsuarios();
 
     @Query("SELECT * FROM usuario WHERE id IN (:UsuarioIds)")
     List<Usuario> loadAllByIds(int[] UsuarioIds);
@@ -21,10 +21,8 @@ public interface UsuarioDAO {
     Usuario findName(String nome);
 
     @Insert
-    void insertAll(Usuario... Usuarios);
+    void insertUsuario(Usuario... Usuarios);
 
     @Delete
-    void delete(Usuario
- Usuario
-);
+    void delete(Usuario Usuario);
 }
