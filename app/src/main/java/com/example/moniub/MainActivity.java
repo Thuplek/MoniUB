@@ -1,18 +1,28 @@
 package com.example.moniub;
 
 import android.content.Intent;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
 import androidx.room.Room;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     static AppDatabase db;
+    static AdpterUsuario adapter;
     TextView txt;
+    ListView listausuario;
     List<Usuario> usuarios;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +57,10 @@ public class MainActivity extends AppCompatActivity {
 //        startActivity(intent);
 
     }
-    public void atualizarUsuario(List<Usuario> usuario)
-    {
-        AdpterUsuario adapter = new AdpterUsuario(usuario, this);
+    public void atualizarUsuario(List<Usuario> usuarios) {
+        AdpterUsuario adapter = new AdpterUsuario(usuarios, this);
         listausuario.setAdapter(adapter);
     }
+
 }
+
