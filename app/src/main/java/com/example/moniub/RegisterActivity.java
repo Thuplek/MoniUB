@@ -86,6 +86,7 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
             Toast.makeText(getApplicationContext(),"Usuario Cadastrado com sucesso!",Toast.LENGTH_SHORT).show();
             finish();
 
+
         }
 
     }

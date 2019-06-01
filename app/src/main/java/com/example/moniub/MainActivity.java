@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         usuarios = new ArrayList<>();
 
-        listausuario = (ListView) findViewById(R.id.lista);
+        listausuario = findViewById(R.id.lista);
         listausuario.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         liveData.observe(this, new Observer<List<Usuario>>() {
             @Override
             public void onChanged(@Nullable List<Usuario> usuarios ) {
-                atualizarCursos(usuarios);
+                atualizarUsuario(usuarios);
             }
         });
         // chamando tela de registro assim q o app abre so pra testar
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 //        startActivity(intent);
 
     }
-    public void atualizarCursos(List<Usuario> usuario)
+    public void atualizarUsuario(List<Usuario> usuario)
     {
         AdpterUsuario adapter = new AdpterUsuario(usuario, this);
         listausuario.setAdapter(adapter);
