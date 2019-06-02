@@ -71,7 +71,7 @@
             android:layout_width="97dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Ser monitor" />
+            android:text="Monitor" />
 
         <ImageView
             android:id="@+id/sair"

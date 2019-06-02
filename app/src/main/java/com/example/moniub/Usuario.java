@@ -12,6 +12,7 @@ public class Usuario {
     }
 
     @PrimaryKey(autoGenerate = true)
+
     private long id;
 
     @ColumnInfo(name = "nome")
@@ -37,6 +38,19 @@ public class Usuario {
 
     @ColumnInfo(name = "sexo")
     private String sexo;
+
+    @ColumnInfo(name = "tipo")
+    private int tipo;
+    // tipo 1 e aluno
+
+
+    public int getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
+    }
 
     public long getId() {
         return id;

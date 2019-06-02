@@ -15,6 +15,8 @@ import android.widget.Toast;
 public class LoginActivity extends AppCompatActivity {
     Button cadastrar;
     Button entrar;
+    static Long id_user;
+    static String matricula_user;
 
     static AppDatabase db;
 
@@ -51,6 +53,8 @@ public class LoginActivity extends AppCompatActivity {
             SENHA = user.getSenha();
             if(sSenha.equals(SENHA)) {
                 Toast.makeText(getApplicationContext(),"Credenciais Corretas",Toast.LENGTH_SHORT).show();
+                id_user = user.getId();
+                matricula_user = user.getMatricula();
 
                 Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
                 startActivity(intent);

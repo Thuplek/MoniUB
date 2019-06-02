@@ -4,12 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
+
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
+    Long id_user;
+    AppDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,13 +80,25 @@ public class MenuActivity extends AppCompatActivity {
     }
     public void telaeditar(View v) {
 
-        Toast.makeText(getApplicationContext(),"Em Breve",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this,EditUserActivity.class);
+        startActivity(intent);
+
 
     }
     public void telamonitor(View v) {
+        db = Room.databaseBuilder(getApplicationContext(),
+                AppDatabase.class, "bd").allowMainThreadQueries().build();
+        id_user = LoginActivity.id_user;
 
-        Intent intent = new Intent(this,TornarMonitorActivity.class);
-        startActivity(intent);
+        Usuario user = db.userDao().findUsuarioById(id_user);
+
+        if(user.getTipo() == 2){
+            Intent intent = new Intent(this,TornarMonitorActivity.class);
+            startActivity(intent);
+        }else{
+            Toast.makeText(getApplicationContext(),"Função liberada apenas para usuarios que são monitores",Toast.LENGTH_SHORT).show();
+        }
+
     }
     public void sair(){
         finish();

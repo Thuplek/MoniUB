@@ -61,7 +61,7 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
         }
 
         public void cadastrar(){
-            EditText matricula = findViewById(R.id.nome);
+            EditText matricula = findViewById(R.id.numeroMatricula);
             EditText senha = findViewById(R.id.senha);
             EditText email = findViewById(R.id.email);
             EditText contato = findViewById(R.id.contato);
@@ -82,6 +82,8 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
             user.setContato(usercontato);
             user.setCurso(usercurso);
             user.setSexo(sexo);
+            // usuario do tipo 1 e Aluno
+            user.setTipo(1);
 
             MainActivity.db.userDao().insertUsuario(user);
             Toast.makeText(getApplicationContext(),"Usuario Cadastrado com sucesso!",Toast.LENGTH_SHORT).show();

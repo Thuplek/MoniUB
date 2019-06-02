@@ -8,6 +8,7 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 
 @Dao
 public interface UsuarioDAO {
@@ -22,6 +23,12 @@ public interface UsuarioDAO {
 
     @Query("SELECT * FROM usuario WHERE matricula LIKE :matricula")
     Usuario findUsuarioByMatricula(String matricula);
+
+    @Query("SELECT * FROM usuario WHERE id LIKE :id")
+    Usuario findUsuarioById(Long id);
+
+    @Update
+    public void updateUsuario(Usuario usuario);
 
     @Insert
     void insertUsuario(Usuario... Usuarios);

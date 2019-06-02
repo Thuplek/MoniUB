@@ -19,7 +19,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/nome"
+            android:id="@+id/numeroMatricula"
             android:layout_width="85dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -39,10 +39,8 @@
             android:id="@+id/nome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:textSize="12sp" />
+            android:layout_weight="1" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -77,7 +75,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/curso"
+            android:id="@+id/spinnerCurso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
