@@ -9,8 +9,11 @@ import androidx.lifecycle.Observer;
 import androidx.room.Room;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.HandlerThread;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
@@ -55,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         // chamando tela de registro assim q o app abre so pra testar
 //        Intent intent = new Intent(this, RegisterActivity.class);
 //        startActivity(intent);
-
+        finish();
     }
     public void atualizarUsuario(List<Usuario> usuarios) {
         AdpterUsuario adapter = new AdpterUsuario(usuarios, this);
