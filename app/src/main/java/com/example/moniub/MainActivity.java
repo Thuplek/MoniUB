@@ -57,9 +57,10 @@ public class MainActivity extends AppCompatActivity {
 //        startActivity(intent);
 
     }
-    public void atualizarUsuario(List<Usuario> usuario)
-    {
-        AdpterUsuario adapter = new AdpterUsuario(usuario, this);
+    public void atualizarUsuario(List<Usuario> usuarios) {
+        AdpterUsuario adapter = new AdpterUsuario(usuarios, this);
         listausuario.setAdapter(adapter);
     }
+
 }
+

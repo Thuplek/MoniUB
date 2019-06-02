@@ -3,6 +3,8 @@ package com.example.moniub;
 import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,40 +14,52 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
     Button cadastrar;
-    EditText matricula;
-    EditText senha;
-//    public static final String MyPREFERENCES = "MyPrefs";
-    public static final String MATRICULA = "1";
-    public static final String SENHA = "1";
+    Button entrar;
+
+    static AppDatabase db;
 
 //    SharedPreferences sharedpreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-//        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        entrar = (Button) findViewById(R.id.entrar);
+
+
+
+        entrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                entrar(v);
+            }
+        });
     }
 
     public void entrar(View v) {
 
-        matricula = findViewById(R.id.nome);
-        senha = findViewById(R.id.senha);
+        EditText matricula  = findViewById(R.id.numeroMatricula);
+        EditText senha =  findViewById(R.id.senha);
 
         String sMatricula = matricula.getText().toString();
         String sSenha = senha.getText().toString();
 
-        if(sMatricula.equals(MATRICULA) && sSenha.equals(SENHA)){
+        db = Room.databaseBuilder(getApplicationContext(),
+                AppDatabase.class, "bd").allowMainThreadQueries().build();
+        Usuario user = db.userDao().findUsuarioByMatricula(sMatricula);
+        String SENHA = "";
+        if(user != null){
+            SENHA = user.getSenha();
+            if(sSenha.equals(SENHA)) {
+                Toast.makeText(getApplicationContext(),"Credenciais Corretas",Toast.LENGTH_SHORT).show();
 
-//            SharedPreferences.Editor editor = sharedpreferences.edit();
-//            editor.putString(MATRICULA, sMatricula);
-//            editor.putString(SENHA, sSenha);
-//            editor.commit();
+                Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
+                startActivity(intent);
 
-            Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
-            startActivity(intent);
-
-        }else{
-            Toast.makeText(getApplicationContext(),"Credenciais incorretas",Toast.LENGTH_SHORT).show();
+            }else {
+                Toast.makeText(getApplicationContext(),"Credenciais incorretas",Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(getApplicationContext(),"Usuário não cadastrado!",Toast.LENGTH_SHORT).show();
         }
 
     }
