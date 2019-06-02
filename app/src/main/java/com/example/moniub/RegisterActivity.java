@@ -61,7 +61,7 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
         }
 
         public void cadastrar(){
-            EditText matricula = findViewById(R.id.numeroMatricula);
+            EditText matricula = findViewById(R.id.nome);
             EditText senha = findViewById(R.id.senha);
             EditText email = findViewById(R.id.email);
             EditText contato = findViewById(R.id.contato);
@@ -72,14 +72,15 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
             String userSenha = senha.getText().toString();
             String useremail = email.getText().toString();
             String usercontato = contato.getText().toString();
-            Integer usercurso =  spinner.getSelectedItemPosition();
+            String usercurso = (String) spinner.getSelectedItem();
             String sexo =((RadioButton)findViewById(radioGroup.getCheckedRadioButtonId())).getText().toString();
 
             Usuario user = new Usuario();
             user.setMatricula(userMatricula);
             user.setSenha(userSenha);
             user.setEmail(useremail);
-            user.setContato(useremail);
+            user.setContato(usercontato);
+            user.setCurso(usercurso);
             user.setSexo(sexo);
 
             MainActivity.db.userDao().insertUsuario(user);

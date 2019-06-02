@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void entrar(View v) {
 
-        matricula = findViewById(R.id.numeroMatricula);
+        matricula = findViewById(R.id.nome);
         senha = findViewById(R.id.senha);
 
         String sMatricula = matricula.getText().toString();

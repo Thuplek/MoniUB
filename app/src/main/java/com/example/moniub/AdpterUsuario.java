@@ -40,12 +40,14 @@ public class AdpterUsuario extends BaseAdapter {
         Usuario usuario = usuarios.get(position);
 
         TextView nome = view.findViewById(R.id.nome);
-        TextView numeroMatricula =  view.findViewById(R.id.numeroMatricula);
+        TextView numeroMatricula =  view.findViewById(R.id.nome);
         TextView contato = (TextView)view.findViewById(R.id.contato);
+        TextView curso = (TextView)view.findViewById(R.id.curso);
 
         nome.setText(usuario.getNome());
         numeroMatricula.setText(usuario.getMatricula());
         contato.setText(usuario.getContato());
+        curso.setText(usuario.getCurso());
 
 
         return view;
