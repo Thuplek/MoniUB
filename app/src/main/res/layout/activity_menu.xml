@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:id="@+id/gl"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+
+        android:layout_centerInParent="true"
+        android:columnCount="3"
+        android:columnOrderPreserved="false"
+        android:filterTouchesWhenObscured="false"
+        android:fitsSystemWindows="false"
+        android:focusable="auto"
+        android:useDefaultMargins="true">
+
+        <ImageView
+            android:id="@+id/cursos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="telaprincipal"
+            app:srcCompat="@drawable/cursos"
+            tools:layout_conversion_absoluteHeight="96dp"
+            tools:layout_conversion_absoluteWidth="96dp"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <ImageView
+            android:id="@+id/editar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="telaeditar"
+            app:srcCompat="@drawable/editar"
+            tools:layout_conversion_absoluteHeight="96dp"
+            tools:layout_conversion_absoluteWidth="96dp"
+            tools:layout_editor_absoluteX="156dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <ImageView
+            android:id="@+id/monitor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="telamonitor"
+            app:srcCompat="@drawable/monitor"
+            tools:layout_conversion_absoluteHeight="96dp"
+            tools:layout_conversion_absoluteWidth="96dp"
+            tools:layout_editor_absoluteX="282dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/periodos"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:gravity="center"
+            android:text="Períodos" />
+
+        <TextView
+            android:id="@+id/perfil"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Perfil" />
+
+        <TextView
+            android:id="@+id/serMonitor"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Monitor" />
+
+        <ImageView
+            android:id="@+id/sair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/sair" />
+
+        <TextView
+            android:id="@+id/sairText"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:gravity="center"
+            android:text="Sair" />
+
+    </GridLayout>
+
+</RelativeLayout>
