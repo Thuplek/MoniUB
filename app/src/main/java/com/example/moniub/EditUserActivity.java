@@ -3,6 +3,7 @@ package com.example.moniub;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -25,6 +26,7 @@ public class EditUserActivity extends AppCompatActivity  implements AdapterView.
     Button salvar;
     Usuario user;
     Switch tipo;
+    Button deleteUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +53,7 @@ public class EditUserActivity extends AppCompatActivity  implements AdapterView.
         periodo = findViewById(R.id.periodo);
         salvar = findViewById(R.id.salvar);
         tipo = findViewById(R.id.tipo);
-
+        deleteUser = findViewById(R.id.deleteUser);
 
         id_user = LoginActivity.id_user;
         String matricula_user = LoginActivity.matricula_user;
@@ -82,8 +84,30 @@ public class EditUserActivity extends AppCompatActivity  implements AdapterView.
             }
         });
 
+        deleteUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                deletarConta(user);
+            }
+        });
+
 
     }
+
+    private void deletarConta(Usuario user) {
+        String matricula = user.getMatricula();
+        int r = db.userDao().removeUser(matricula);
+
+        if(r == 1){ //Se remover uma linha do banco
+            Toast.makeText(this, "Excluido com sucesso", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(this, LoginActivity.class);
+            startActivity(i);
+            finish();
+        } else{
+            Toast.makeText(this, "Erro ao excluir usuário", Toast.LENGTH_SHORT).show();
+        }
+    }
+
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
       //  String text = parent.getItemAtPosition(position).toString();

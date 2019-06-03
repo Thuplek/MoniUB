@@ -24,8 +24,11 @@ public interface UsuarioDAO {
     @Query("SELECT * FROM usuario WHERE matricula LIKE :matricula")
     Usuario findUsuarioByMatricula(String matricula);
 
-    @Query("SELECT * FROM usuario WHERE id LIKE :id")
-    Usuario findUsuarioById(Long id);
+    @Query("SELECT * FROM usuario WHERE id LIKE :matricula")
+    Usuario findUsuarioById(String matricula);
+
+    @Query("DELETE FROM usuario WHERE matricula LIKE :matricula")
+    int removeUser(String matricula);
 
     @Update
     public void updateUsuario(Usuario usuario);

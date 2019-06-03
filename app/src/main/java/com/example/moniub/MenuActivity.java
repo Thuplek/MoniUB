@@ -90,7 +90,7 @@ public class MenuActivity extends AppCompatActivity {
                 AppDatabase.class, "bd").allowMainThreadQueries().build();
         id_user = LoginActivity.id_user;
 
-        Usuario user = db.userDao().findUsuarioById(id_user);
+        Usuario user = db.userDao().findUsuarioById(id_user.toString());
 
         if(user.getTipo() == 2){
             Intent intent = new Intent(this,TornarMonitorActivity.class);
