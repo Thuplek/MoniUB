@@ -1,93 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <GridLayout
-        android:id="@+id/gl"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="170dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/MoniUBColor" />
 
-        android:layout_centerInParent="true"
-        android:columnCount="3"
-        android:columnOrderPreserved="false"
-        android:filterTouchesWhenObscured="false"
-        android:fitsSystemWindows="false"
-        android:focusable="auto"
-        android:useDefaultMargins="true">
+    <LinearLayout
+        android:layout_width="416dp"
+        android:layout_height="464dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
 
-        <ImageView
-            android:id="@+id/cursos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="telaprincipal"
-            app:srcCompat="@drawable/cursos"
-            tools:layout_conversion_absoluteHeight="96dp"
-            tools:layout_conversion_absoluteWidth="96dp"
-            tools:layout_editor_absoluteX="30dp"
-            tools:layout_editor_absoluteY="0dp" />
-
-        <ImageView
-            android:id="@+id/editar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="telaeditar"
-            app:srcCompat="@drawable/editar"
-            tools:layout_conversion_absoluteHeight="96dp"
-            tools:layout_conversion_absoluteWidth="96dp"
-            tools:layout_editor_absoluteX="156dp"
-            tools:layout_editor_absoluteY="0dp" />
-
-        <ImageView
-            android:id="@+id/monitor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="telamonitor"
-            app:srcCompat="@drawable/monitor"
-            tools:layout_conversion_absoluteHeight="96dp"
-            tools:layout_conversion_absoluteWidth="96dp"
-            tools:layout_editor_absoluteX="282dp"
-            tools:layout_editor_absoluteY="0dp" />
-
-        <TextView
-            android:id="@+id/periodos"
-            android:layout_width="96dp"
-            android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:gravity="center"
-            android:text="Períodos" />
-
-        <TextView
-            android:id="@+id/perfil"
-            android:layout_width="90dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Perfil" />
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/serMonitor"
-            android:layout_width="97dp"
+            <ImageView
+                android:id="@+id/cursos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="telaprincipal"
+                app:srcCompat="@drawable/cursos"
+                tools:layout_conversion_absoluteHeight="96dp"
+                tools:layout_conversion_absoluteWidth="96dp"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/null"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/periodos"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:text="Períodos" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Monitor" />
+            android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/sair"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/sair" />
+            <ImageView
+                android:id="@+id/editar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="telaeditar"
+                app:srcCompat="@drawable/editar"
+                tools:layout_conversion_absoluteHeight="96dp"
+                tools:layout_conversion_absoluteWidth="96dp"
+                tools:layout_editor_absoluteX="156dp"
+                tools:layout_editor_absoluteY="0dp" />
 
-        <TextView
-            android:id="@+id/sairText"
-            android:layout_width="95dp"
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_row="3"
-            android:layout_column="0"
             android:gravity="center"
-            android:text="Sair" />
+            android:orientation="horizontal">
 
-    </GridLayout>
+            <TextView
+                android:id="@+id/perfil"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Perfil" />
+        </LinearLayout>
 
-</RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/monitor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="telamonitor"
+                app:srcCompat="@drawable/monitor"
+                tools:layout_conversion_absoluteHeight="96dp"
+                tools:layout_conversion_absoluteWidth="96dp"
+                tools:layout_editor_absoluteX="282dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/serMonitor"
+                android:layout_width="97dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Monitor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/sair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/sair" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sairText"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Sair" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
