@@ -28,8 +28,6 @@ public class LoginActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         entrar = (Button) findViewById(R.id.entrar);
 
-
-
         entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,6 +57,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
                 startActivity(intent);
+                finish();
 
             }else {
                 Toast.makeText(getApplicationContext(),"Credenciais incorretas",Toast.LENGTH_SHORT).show();
