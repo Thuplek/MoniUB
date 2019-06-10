@@ -16,6 +16,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
             android:orientation="vertical"
             android:padding="10sp">
 
@@ -23,13 +24,15 @@
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Numero de Matricula" />
+                android:text="Numero de Matricula"
+                android:textColor="@color/branco" />
 
             <EditText
                 android:id="@+id/numeroMatricula"
-                android:layout_width="391dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:ems="10"
+                android:background="@drawable/borderbuttonwhite"
                 android:inputType="number" />
 
             <TextView
@@ -37,26 +40,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Senha" />
+                android:text="Senha"
+                android:textColor="@color/branco" />
 
             <EditText
                 android:id="@+id/senha"
-                android:layout_width="391dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"
                 android:inputType="textPassword"
+                android:background="@drawable/borderbuttonwhite"
                 android:padding="10sp" />
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="390dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Email" />
+                android:text="Email"
+                android:textColor="@color/branco" />
 
             <EditText
+                android:background="@drawable/borderbuttonwhite"
                 android:id="@+id/email"
-                android:layout_width="392dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"
                 android:inputType="textEmailAddress" />
@@ -66,12 +73,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Contato" />
+                android:text="Contato"
+                android:textColor="@color/branco" />
 
             <EditText
+                android:background="@drawable/borderbuttonwhite"
                 android:id="@+id/contato"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:ems="10"
                 android:inputType="phone" />
 
@@ -80,12 +89,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Curso" />
+                android:text="Curso"
+                android:textColor="@color/branco" />
 
             <Spinner
                 android:id="@+id/spinnerCursos"
-                android:layout_width="392dp"
-                android:layout_height="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:scrollbarThumbHorizontal="@color/branco"
+                android:scrollbarThumbVertical="@color/branco"
                 tools:layout_conversion_wrapHeight="63"
                 tools:layout_conversion_wrapWidth="1037" />
 
@@ -94,7 +106,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Endereço" />
+                android:text="Endereço"
+                android:textColor="@color/branco" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -103,9 +116,10 @@
             </LinearLayout>
 
             <EditText
+                android:background="@drawable/borderbuttonwhite"
                 android:id="@+id/endereco"
                 android:layout_width="match_parent"
-                android:layout_height="78dp"
+                android:layout_height="50dp"
                 android:ems="10"
                 android:inputType="textPersonName" />
 
@@ -119,17 +133,21 @@
                 android:persistentDrawingCache="animation">
 
                 <RadioButton
+                    android:buttonTint="@color/branco"
                     android:id="@+id/masculino"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="50dp"
-                    android:text="Masculino" />
+                    android:text="Masculino"
+                    android:textColor="@color/branco" />
 
                 <RadioButton
+                    android:buttonTint="@color/branco"
                     android:id="@+id/feminino"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Feminino" />
+                    android:text="Feminino"
+                    android:textColor="@color/branco" />
             </RadioGroup>
 
             <TextView
